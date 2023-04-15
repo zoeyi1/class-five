@@ -1,0 +1,321 @@
+@font-face {
+    font-display: block;
+    font-family: "DIN-Next-W01-Light";
+    src: url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/3e0b2cd7-9657-438b-b4af-e04122e8f1f7.eot?#iefix");
+    src: url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/3e0b2cd7-9657-438b-b4af-e04122e8f1f7.eot?#iefix") format("eot"),
+    url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/bc176270-17fa-4c78-a343-9fe52824e501.woff") format("woff"),
+    url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/3516f91d-ac48-42cd-acfe-1be691152cc4.ttf") format("truetype"),
+    url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/d1b1e866-a411-42ba-8f75-72bf28e23694.svg#d1b1e866-a411-42ba-8f75-72bf28e23694") format("svg");
+}
+
+@font-face {
+    font-display: block;
+    font-family:"Avenir-LT-W01_85-Heavy1475544";
+    src:url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/6af9989e-235b-4c75-8c08-a83bdaef3f66.eot?#iefix");
+    src:url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/6af9989e-235b-4c75-8c08-a83bdaef3f66.eot?#iefix") format("eot"),
+    url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/d513e15e-8f35-4129-ad05-481815e52625.woff2") format("woff2"),
+    url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/61bd362e-7162-46bd-b67e-28f366c4afbe.woff") format("woff"),
+    url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/ccd17c6b-e7ed-4b73-b0d2-76712a4ef46b.ttf") format("truetype"),
+    url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/20577853-40a7-4ada-a3fb-dd6e9392f401.svg#20577853-40a7-4ada-a3fb-dd6e9392f401") format("svg");
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInTop {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+}
+
+@keyframes slideInBottom {
+    0% {
+      left: 50%;
+      transform: translate(-50%, 200%);
+    }
+}
+
+/* container */
+.container-fluid {
+    margin-left: 0;
+}
+
+/* body */
+body {
+    background-color: black;
+    cursor: url("images/cursor.png"), url("images/logoLg.png"), auto;
+    /* how do i make it not disappear */
+    animation: fadeInAnimation ease 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+/* navbar */
+nav {
+    animation: slideInTop ease 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+.nav-bg-transparent {
+    background-color: rgba(0, 0, 0, 0.5) !important;
+}
+
+.nav-bg-black {
+    background-color: black !important;
+}
+
+.navbar-brand {
+    margin-left: 1.5rem;
+}
+
+.navbar-brand:hover {
+    cursor: url("images/cursor.png"), url("images/logoLg.png"), auto;
+}
+
+.nav-item {
+    font-family: "DIN-Next-W01-Light";
+    font-size: 1rem;
+    color: white;
+}
+
+.nav-link {
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+    color: white;
+}
+
+.nav-link:hover {
+    cursor: url("images/cursor.png"), url("images/logoLg.png"), auto;
+    background-color: white;
+    color: black;
+}
+
+.navbar-toggler {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+}
+
+.dropdown-menu {
+    background-color: black;
+    color:white;
+}
+
+.dropdown-item:hover {
+    cursor: url("images/cursor.png"), url("images/logoLg.png"), auto;
+    background-color: white;
+    color: black;
+}
+
+.dropdown:hover .dropdown-menu{
+    display: block;
+}
+
+/* text */
+.text {
+    position: relative;
+    text-align: left;
+    padding-left: 10%;
+    color: white;
+    background-color: black;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.cta {
+    margin-top: 10vh;
+    padding-top: 25vh;
+}
+
+.cta-title {
+    font-family: "Avenir-LT-W01_85-Heavy1475544";
+    position: relative;
+    margin-left: 10%;
+    color: white;
+    font-size: 3.8rem;
+    line-height: 1.2;
+    width: 40%;
+}
+
+.cta-text {
+    font-family: "DIN-Next-W01-Light";
+    position: relative;
+    margin-top: 1rem;
+    margin-left: 10%;
+    color: white;
+    font-size: 1.2rem;
+    width: 40%;
+}
+
+.text-box-1 {
+    margin-top: 60rem;
+    width: 80%;
+    height: 20rem;
+}
+
+.text-box-2 {
+    margin-top: 20rem;
+    width: 80%;
+    height: 24rem;
+}
+
+.text-title {
+    position: relative;
+    top: 4rem;
+    font-family: "DIN-Next-W01-Light";
+    font-size: 3rem;
+}
+
+.text-body {
+    position: relative;
+    padding-left: 10%;
+    padding-right: 20%;
+    top: 5rem;
+    font-family:"Avenir-LT-W01_85-Heavy1475544";
+    font-size: 1rem;
+    color: white !important;
+}
+
+/* buttons */
+.btn-outline {
+    font-family: "Avenir-LT-W01_85-Heavy1475544";
+    position: relative;
+    margin-left: 10%;
+    margin-top: 2rem;
+    background-color: white;
+    color: black;
+    border-color: white;
+    font-size: 2rem;
+}
+
+.btn-outline:hover {
+    cursor: url("images/cursor.png"), url("images/logoLg.png"), auto;
+    background-color: black;
+    color: white;
+    border-color: white;
+}
+
+.btn-chevron {
+    margin-top: 80vh;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: black;
+    color: white;
+    border-color: transparent;
+    border-radius: 0;
+
+    animation: slideInBottom ease 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.btn-chevron:hover {
+    cursor: url("images/cursor.png"), url("images/logoLg.png"), auto;
+    background-color: white;
+    color: black;
+    border-color: black;
+}
+
+.bi-chevron-down {
+    display: block;
+    width: 2rem;
+    height: 2rem;
+    fill: currentColor;
+}
+
+/* content */
+.content {
+    position: relative;
+    margin-top: 10vh;
+}
+
+/* logo */
+.logo-lg {
+    position: relative;
+    /* center image horizontally */
+    left: 50%;
+    transform: translate(-50%);
+
+    animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+
+
+/* members */
+.events {
+    position: relative;
+}
+
+.card {
+    /* navbar height is 93 pixels */
+    top: 12vh;
+    background-color: black;
+    border-color: white;
+    color: white;
+}
+
+.card-title {
+    font-family: "Avenir-LT-W01_85-Heavy1475544";
+    font-size: 2rem;
+}
+
+.card-text {
+    font-family: "DIN-Next-W01-Light";
+    font-size: 1rem;
+}
+
+.btn-card {
+    font-family: "Avenir-LT-W01_85-Heavy1475544";
+    position: relative;
+    background-color: white;
+    color: black;
+    border-color: white;
+    font-size: 1rem;
+    border-radius: 0;
+}
+
+.btn-card:hover {
+    background-color: black;
+    color: white;
+    border-color: white;
+}
+
+/* subscribe */
+.subscribe {
+    margin-top: 24vh;
+}
+
+.subscribe-header {
+    position: relative;
+    font-family: "Avenir-LT-W01_85-Heavy1475544";
+    color: white;
+    font-size: 3.8rem;
+    line-height: 1.2;
+    text-align: center;
+}
+
+.subscribe-text {
+    font-family: "DIN-Next-W01-Light";
+    position: relative;
+    margin-top: 2rem;
+    color: white;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+/* about */
+.about {
+    position: relative;
+    top: 12vh;
+}

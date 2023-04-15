@@ -18,41 +18,73 @@
 </head>
 <body>
     <div class = "container-fluid">
-        <nav id="navbar" class = "navbar navbar-expand-sm nav-bg-black navbar-dark fixed-top py-3">
-          <a class = "navbar-brand" href = "../classfive/">
-              <img src = "{% static '/classfive/images/logo.png' %}" alt = "logo" style = "width: 50%;">
-          </a>
-          <button class = "navbar-toggler" type = "button" data-bs-toggle = "collapse" data-bs-target = "#collapsibleNavbar">
-            <span class = "navbar-toggler-icon"></span>
-          </button>
-          <div class = "collapse navbar-collapse py-2 pe-4 justify-content-end" id = "collapsibleNavbar">
-            <ul class = "navbar-nav">
-              <li class="nav-item dropdown">
-                <a class="nav-link" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Dropdown
-                </a>
-                <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
-              </li>
-              <li class = "nav-item">
-                <a class = "nav-link" href = "events">EVENTS</a>
-              </li>
-              <li class = "nav-item">
-                <a class = "nav-link" href = "shop">SHOP</a>
-              </li>
-              <li class = "nav-item">
-                <a class = "nav-link" href = "about">ABOUT</a>
-              </li>
-              <li class = "nav-item">
-                <a class = "nav-link" href = "contact">CONTACT</a>
-              </li>
-            </ul>
-          </div>
-        </nav>
-        <div class = "about">about</div>
+      <nav id="navbar" class = "navbar navbar-expand-sm nav-bg-transparent navbar-dark fixed-top py-3">
+        <a class = "navbar-brand" href = "../classfive/">
+            <img src = "{% static '/classfive/images/logo.png' %}" alt = "logo" style = "width: 50%;">
+        </a>
+        <button class = "navbar-toggler" type = "button" data-bs-toggle = "collapse" data-bs-target = "#collapsibleNavbar">
+          <span class = "navbar-toggler-icon"></span>
+        </button>
+        <div class = "collapse navbar-collapse py-2 pe-4 justify-content-end" id = "collapsibleNavbar">
+          <ul class = "navbar-nav">
+            <li class="nav-item dropdown">
+              <a class="nav-link" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Events
+              </a>
+              <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+                <li><a class="dropdown-item" href="calendar">Calendar</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Merch
+              </a>
+              <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                About
+              </a>
+              <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+                <li><a class="dropdown-item" href="about">About Us</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Contact
+              </a>
+              <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+                <li><a class="dropdown-item" href="subscribe">Subscribe</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+            <!--
+            <li class = "nav-item">
+              <a class = "nav-link" href = "events">EVENTS</a>
+            </li>
+            <li class = "nav-item">
+              <a class = "nav-link" href = "shop">SHOP</a>
+            </li>
+            <li class = "nav-item">
+              <a class = "nav-link" href = "about">ABOUT</a>
+            </li>
+            <li class = "nav-item">
+              <a class = "nav-link" href = "contact">CONTACT</a>
+            </li>
+          -->
+          </ul>
+        </div>
+      </nav>
+      <div class = "about">about</div>
     </div>
 </body>
 </html>

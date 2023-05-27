@@ -75,6 +75,11 @@ nav {
 
 .navbar-brand {
     margin-left: 1.5rem;
+    width: 350px;
+}
+
+.navbar-toggler {
+    color: white;
 }
 
 .navbar-brand:hover {
@@ -244,6 +249,7 @@ nav {
     /* center image horizontally */
     left: 50%;
     transform: translate(-50%);
+    height: 65vh;
 
     animation: fadeInAnimation ease 3s;
     animation-iteration-count: 1;
@@ -320,3 +326,93 @@ nav {
     top: 12vh;
     color: white;
 }
+
+
+
+
+
+
+
+
+
+.glitch-container {
+    position: relative;
+  }
+  
+  .glitch-overlay {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    height: 65vh;
+    background: url("images/logoLg.png");
+    background-size: 100% 100%;
+    animation: glitch 2s linear infinite;
+  }
+  
+  @keyframes glitch {
+    0% {
+      transform: skew(10deg) scale(1.1);
+    }
+    25% {
+      transform: skew(-10deg) scale(1.1);
+    }
+    50% {
+      transform: skew(5deg) scale(1.1);
+    }
+    75% {
+      transform: skew(-5deg) scale(1.1);
+    }
+    100% {
+      transform: skew(0deg) scale(1.1);
+    }
+  }
+  
+  .glitch-overlay:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -2px;
+    width: 100%;
+    height: 100%;
+    background: url("https://source.unsplash.com/random/800x600");
+    background-size: 100% 100%;
+    z-index: -1;
+    animation: noise-anim 2s infinite linear alternate-reverse;
+  }
+  
+  @keyframes noise-anim {
+    0% {
+      clip-path: inset(10% 0 10% 0);
+    }
+    10% {
+      clip-path: inset(20% 0 5% 0);
+    }
+    20% {
+      clip-path: inset(5% 0 20% 0);
+    }
+    30% {
+      clip-path: inset(15% 0 5% 0);
+    }
+    40% {
+      clip-path: inset(10% 0 10% 0);
+    }
+    50% {
+      clip-path: inset(20% 0 5% 0);
+    }
+    60% {
+      clip-path: inset(5% 0 20% 0);
+    }
+    70% {
+      clip-path: inset(15% 0 5% 0);
+    }
+    80% {
+      clip-path: inset(10% 0 10% 0);
+    }
+    90% {
+      clip-path: inset(20% 0 5% 0);
+    }
+    100% {
+      clip-path: inset(5% 0 20% 0);
+    }
+  }
+  

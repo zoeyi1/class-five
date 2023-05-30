@@ -12,3 +12,6 @@ def subscribe(request):
 
 def about(request):
     return render(request, "classfive/about.html")
+
+def shop(request):
+    return render(request, "classfive/shop.html")

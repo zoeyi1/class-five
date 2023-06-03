@@ -60,7 +60,7 @@
 /* body */
 body {
     background-color: black;
-    cursor: url("images/cursor.png"), url("images/logoLg.png"), auto;
+    /* cursor: url("images/cursor.png"), url("images/logoLg.png"), auto; */
     /* how do i make it not disappear */
     animation: fadeInAnimation ease 2s;
     animation-iteration-count: 1;
@@ -105,7 +105,7 @@ nav {
 }
 
 .navbar-brand:hover {
-    cursor: url("images/cursor.png"), url("images/logoLg.png"), auto;
+    /* cursor: url("images/cursor.png"), url("images/logoLg.png"), auto; */
 }
 
 .nav-item {
@@ -121,7 +121,7 @@ nav {
 }
 
 .nav-link:hover {
-    cursor: url("images/cursor.png"), url("images/logoLg.png"), auto;
+    /* cursor: url("images/cursor.png"), url("images/logoLg.png"), auto; */
     background-color: white;
     color: black;
 }
@@ -142,7 +142,7 @@ nav {
 }
 
 .dropdown-item:hover {
-    cursor: url("images/cursor.png"), url("images/logoLg.png"), auto;
+    /* cursor: url("images/cursor.png"), url("images/logoLg.png"), auto; */
     background-color: white;
     color: black;
 }
@@ -212,7 +212,7 @@ nav {
 }
 
 .btn-outline:hover {
-    cursor: url("images/cursor.png"), url("images/logoLg.png"), auto;
+    /* cursor: url("images/cursor.png"), url("images/logoLg.png"), auto; */
     background-color: black;
     color: white;
     border-color: white;
@@ -235,7 +235,7 @@ nav {
 }
 
 .btn-chevron:hover {
-    cursor: url("images/cursor.png"), url("images/logoLg.png"), auto;
+    /* cursor: url("images/cursor.png"), url("images/logoLg.png"), auto; */
     background-color: white;
     color: black;
     border-color: black;

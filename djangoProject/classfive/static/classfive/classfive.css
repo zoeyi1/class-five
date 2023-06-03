@@ -65,6 +65,7 @@ body {
     animation: fadeInAnimation ease 2s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
+    overflow-x: hidden; /* prevents horizontal scrolling on mobile */
 }
 
 li {
@@ -89,10 +90,18 @@ nav {
 .navbar-brand {
     margin-left: 1.5rem;
     width: 350px;
+    
+}
+
+.navbar-logo {
+    width: 50%;
 }
 
 .navbar-toggler {
     color: white;
+    position: absolute;
+    top: 10px;
+    right: 0px;
 }
 
 .navbar-brand:hover {
@@ -161,57 +170,40 @@ nav {
 .cta-title {
     font-family: "Avenir-LT-W01_85-Heavy1475544";
     position: relative;
-    margin-left: 10%;
     color: white;
-    font-size: 3.8rem;
+    /* font-size: 3.8rem; */
+    font-size: 5vw;
     line-height: 1.2;
-    width: 40%;
+}
+
+/* mobile devices */
+@media (max-width: 767px) {
+    .cta-title {
+        font-size: 2.8rem;
+    }
 }
 
 .cta-text {
     font-family: "DIN-Next-W01-Light";
     position: relative;
     margin-top: 1rem;
-    margin-left: 10%;
     color: white;
     font-size: 1.2rem;
-    width: 40%;
 }
 
-.text-box-1 {
-    margin-top: 60rem;
-    width: 80%;
-    height: 20rem;
+.col-img {
+    margin-bottom: 1.5rem;
 }
 
-.text-box-2 {
-    margin-top: 20rem;
-    width: 80%;
-    height: 24rem;
-}
-
-.text-title {
-    position: relative;
-    top: 4rem;
-    font-family: "DIN-Next-W01-Light";
-    font-size: 3rem;
-}
-
-.text-body {
-    position: relative;
-    padding-left: 10%;
-    padding-right: 20%;
-    top: 5rem;
-    font-family:"Avenir-LT-W01_85-Heavy1475544";
-    font-size: 1rem;
-    color: white !important;
+.row {
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 /* buttons */
 .btn-outline {
     font-family: "Avenir-LT-W01_85-Heavy1475544";
     position: relative;
-    margin-left: 10%;
     margin-top: 2rem;
     background-color: white;
     color: black;
@@ -227,10 +219,11 @@ nav {
 }
 
 .btn-chevron {
-    margin-top: 80vh;
-    position: absolute;
+    display: block;
+    margin-top: 10vh;
+    position: relative;
     left: 50%;
-    transform: translate(-50%);
+    transform: translateX(-50%);
     background-color: black;
     color: white;
     border-color: transparent;
@@ -259,6 +252,7 @@ nav {
 .content {
     position: relative;
     margin-top: 10vh;
+    overflow-x: hidden;
 }
 
 /* logo */
@@ -267,7 +261,7 @@ nav {
     /* center image horizontally */
     left: 50%;
     transform: translate(-50%);
-    height: 65vh;
+    height: 60vh;
 
     animation: fadeInAnimation ease 3s;
     animation-iteration-count: 1;

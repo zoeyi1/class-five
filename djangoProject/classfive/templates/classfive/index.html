@@ -24,7 +24,7 @@
     <div class = "container-fluid">
       <nav id="navbar" class = "navbar navbar-expand-sm nav-bg-transparent navbar-dark fixed-top py-3">
         <a class = "navbar-brand" href = "../classfive/">
-            <img src = "{% static '/classfive/images/logo.png' %}" alt = "logo" style = "width: 50%;">
+            <img class = "navbar-logo" src = "{% static '/classfive/images/logo.png' %}" alt = "logo">
         </a>
         <button class = "navbar-toggler" type = "button" data-bs-toggle = "collapse" data-bs-target = "#collapsibleNavbar">
           <span class = "navbar-toggler-icon"></span>
@@ -88,9 +88,16 @@
 
         <section class = "scroll-section" id = "scroll-section">
           <div class = "container-fluid cta">
-            <div class = "cta-title">SPRING TRAINING<br>OPPORTUNITY</div>
-            <div class = "cta-text">Class Five Climbing will be offering open practice sessions for athletes that are looking to prepare for championship events. Open to Youth C, B, A, Jr and Open competitors.</div>
-            <button type="button" class="btn btn-outline rounded-0">REGISTER</button>
+            <div class="row align-items-stretch justify-content-center">
+              <div class="col-md-6 text-md-end">
+                <img class = "img-fluid col-img" src="{% static '/classfive/images/landscape.png' %}" alt="Card image">
+              </div>
+              <div class="col-md-6 text-md-start">
+                <div class = "cta-title">SPRING TRAINING<br>OPPORTUNITY</div>
+                <div class = "cta-text">Class Five Climbing will be offering open practice sessions for athletes that are looking to prepare for championship events. Open to Youth C, B, A, Jr and Open competitors.</div>
+                <button type="button" class="btn btn-outline rounded-0">REGISTER</button>
+              </div>
+            </div>
           </div>
           <br><br><br><br>
           <div class = "container-fluid cta">
@@ -99,17 +106,6 @@
             <button type="button" class="btn btn-outline rounded-0">BUTTON</button>
           </div>
         </section>
-        <!--
-        <div class="d-inline-block text text-box-1">
-          <div class = "text-title">TITLE</div>
-          <div class = "text-body">body body body body body body body body body body body body body body body body body body body body</div>
-        </div>
-
-        <div class="d-inline-block text text-box-2">
-          <div class = "text-title">TITLE</div>
-          <div class = "text-body">body body body body body body body body body body body body body body body body body body body body body body body body body body body body body body body body body body body body body body body body body body body body body body body body body body body body body body body body body body body body body body body body body body body body body body body body body body body</div>
-        </div>
-        -->
       </div>
     </div>
 </body>

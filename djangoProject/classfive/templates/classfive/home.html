@@ -1,0 +1,69 @@
+{% extends 'classfive/base.html' %}
+{% load static %}
+
+{% block title %}Home | Class Five Climbing{% endblock %}
+
+{% block content %}    <!-- overrides content block in base.html-->
+  <div class = "content">
+    <!-- Carousel -->
+    <div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+      <!-- Indicators/dots -->
+      <div class="carousel-indicators">
+        <!-- these 2 for loops break the carousel-->
+        {% for slideInstance in slideInstances %}
+          <button type="button" data-bs-target="#demo" data-bs-slide-to="{{ forloop.counter0 }}" {% if forloop.first %}class="active"{% endif %}></button>
+        {% endfor %}
+      </div>
+      
+      <!-- The slideshow/carousel -->
+      <div class="carousel-inner">
+        {% for slideInstance in slideInstances %}
+        <div class="carousel-item {% if forloop.first %}active{% endif %}">
+          <img src="{{ slideInstance.img.url }}" class="d-block" style="width:100%">
+          <div class="carousel-caption">
+            <h3>{{ slideInstance.title }}</h3>
+            <p>{{ slideInstance.desc }}</p>
+            <a href = "{{ slideInstance.link }}" type="button" class="btn btn-outline rounded-0 carousel-button">REGISTER</a>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+      
+      <!-- Left and right controls/icons -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+
+    <img class = "logo-lg" src = "{% static '/classfive/images/logoLg.png' %}" alt = "logo-lg">
+
+    <!--
+    <a href="#scroll-section" data-bs-offset="200">
+      <button type="button" class="btn btn-chevron">
+        <svg xmlns="http://www.w3.org/2000/svg" class="bi bi-chevron-down" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+        </svg>
+      </button>
+    </a>
+    -->
+
+    {% for eventInstance in eventInstances %}
+    <div class = "container-fluid cta">
+      <div class="row align-items-stretch justify-content-center">
+        <div class="col-md-6 text-md-end">
+          <img class = "img-fluid col-img" src="{{ eventInstance.img.url }}" alt="Card image">
+        </div>
+        <div class="col-md-6 text-md-start">
+          <div class = "cta-title">{{ eventInstance.title }}</div>
+          <div class = "cta-text">{{ eventInstance.desc }}</div>
+          <a href = "{{ eventInstance.link }}" type="button" class="btn btn-outline rounded-0">REGISTER</a>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+{% endblock %}

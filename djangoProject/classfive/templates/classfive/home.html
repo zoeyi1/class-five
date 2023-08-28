@@ -19,11 +19,12 @@
       <!-- The slideshow/carousel -->
       <div class="carousel-inner">
         {% for slideInstance in slideInstances %}
-        <div class="carousel-item {% if forloop.first %}active{% endif %}">
+                                    <!-- so that it looks nice on load (remove later) -->
+        <div class="carousel-item {% if forloop.last %}active{% endif %}">
           <img src="{{ slideInstance.img.url }}" class="d-block" style="width:100%">
           <div class="carousel-caption">
-            <h3>{{ slideInstance.title }}</h3>
-            <p>{{ slideInstance.desc }}</p>
+            <h1>{{ slideInstance.title }}</h1>
+            <p class = "carousel-text">{{ slideInstance.desc }}</p>
             <a href = "{{ slideInstance.link }}" type="button" class="btn btn-outline rounded-0 carousel-button">REGISTER</a>
           </div>
         </div>
@@ -59,7 +60,7 @@
         </div>
         <div class="col-md-6 text-md-start">
           <div class = "cta-title">{{ eventInstance.title }}</div>
-          <div class = "cta-text">{{ eventInstance.desc }}</div>
+          <div class = "cta-text">{{ eventInstance.desc|safe}}</div>
           <a href = "{{ eventInstance.link }}" type="button" class="btn btn-outline rounded-0">REGISTER</a>
         </div>
       </div>

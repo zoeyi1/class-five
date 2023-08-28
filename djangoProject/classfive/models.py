@@ -14,7 +14,7 @@ class event(models.Model):
 class slide(models.Model):
     name = models.TextField(verbose_name="name (what you want this event to be called in the admin interface)")
     title = models.TextField()
-    desc = models.TextField(verbose_name="description (should be around 1 sentence long)")
+    desc = models.TextField(verbose_name="description (should be around 1-2 sentences long)")
     img = models.ImageField(upload_to = "images/", verbose_name="image")
     link = models.TextField(verbose_name="link (website that the \"register\" button goes to. make sure to include \"https://\" in the website address)")
 
@@ -23,8 +23,9 @@ class slide(models.Model):
     
 class card(models.Model):
     name = models.TextField(verbose_name="name (what you want this event to be called in the admin interface)")
+    date = models.TextField()
     title = models.TextField()
-    desc = models.TextField(verbose_name="description (should be around 1 sentence long)")
+    desc = models.TextField(verbose_name="description (should be around 1-2 sentences long)")
     img = models.ImageField(upload_to = "images/", verbose_name="image")
     link = models.TextField(verbose_name="link (website that the \"register\" button goes to. make sure to include \"https://\" in the website address)")
 

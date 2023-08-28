@@ -19,3 +19,6 @@ def about(request):
 
 def shop(request):
     return render(request, "classfive/shop.html")
+
+def training(request):
+    return render(request, "classfive/training.html")

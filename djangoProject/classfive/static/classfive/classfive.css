@@ -104,13 +104,6 @@ nav {
     width: 50%;
 }
 
-.navbar-toggler {
-    color: white;
-    position: absolute;
-    top: 10px;
-    right: 0px;
-}
-
 /*
 .navbar-brand:hover {
     cursor: url("images/cursor.png"), url("images/logoLg.png"), auto;
@@ -140,11 +133,19 @@ nav {
 .navbar-toggler {
     margin-left: 1.5rem;
     margin-right: 1.5rem;
+    border-color: black;
+    color: white;
+}
+
+.navbar-toggler:hover {
+    border-color: white;
 }
 
 .navbar-toggler-icon {
     background-image: none;
+    margin-top: 0.7rem;
 }
+
 .navbar-toggler-icon::before {
     font-family: FontAwesome;
     content: "\f0c9"; /* fa-bars, fa-navicon */
@@ -184,8 +185,8 @@ nav {
 }
 
 .cta {
-    margin-top: 10vh;
     padding-top: 5vh;
+    margin-bottom: 5vh;
 }
 
 .cta-title {
@@ -193,14 +194,14 @@ nav {
     position: relative;
     color: white;
     /* font-size: 3.8rem; */
-    font-size: 5vw;
+    font-size: 4vw;
     line-height: 1.2;
 }
 
 /* mobile devices */
 @media (max-width: 767px) {
     .cta-title {
-        font-size: 2.8rem;
+        font-size: 3rem;
     }
 }
 
@@ -209,7 +210,7 @@ nav {
     position: relative;
     margin-top: 1rem;
     color: white;
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 .col-img {
@@ -268,9 +269,13 @@ nav {
     fill: currentColor;
 }
 
+carousel {
+    margin-top: 10vh !important;
+}
+
 .carousel-button {
     font-size: 1.2rem;
-    margin-top: 0;
+    margin: 0;
 }
 
 .carousel-button:hover {
@@ -280,8 +285,8 @@ nav {
 /* content */
 .content {
     position: relative;
-    margin-top: 10vh;
     overflow-x: hidden;
+    margin-top: 3vh;
 }
 
 /* logo */
@@ -291,22 +296,13 @@ nav {
     left: 50%;
     transform: translate(-50%);
     height: 60vh;
-    margin-top: 10vh;
+    margin-top: 20vh;
+    margin-bottom: 20vh;
 
     animation: fadeInAnimation ease 3s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
-
-/* carousel */
-/*.carousel {
-    top: 0;
-    height: 90vh;
-}*/
-
-/*.carousel-inner {
-    height: 90vh;
-}*/
 
 .carousel-item {
     object-fit: cover;
@@ -328,6 +324,14 @@ nav {
 .carousel-caption {
     bottom: 10%;
     padding: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-text {
+    width: 60%;
+    margin: 0 auto;
+    margin-bottom: 1rem;
 }
 
 /* members */
@@ -342,6 +346,12 @@ nav {
     border-color: white;
     color: white;
     margin-bottom: 10%;
+}
+
+.card-date {
+    font-family: "DIN-Next-W01-Light";
+    font-size: 1.2rem;
+    margin-bottom: 0;
 }
 
 .card-title {
@@ -382,6 +392,12 @@ nav {
     left: 50%;
     transform: translate(-50%);
     /* border: 2px solid white; */
+}
+
+.response {
+    font-family: "Avenir-LT-W01_85-Heavy1475544";
+    font-size: 1.5rem;
+    color: white; /* Replace with your desired color */
 }
 
 .subscribe-header {
@@ -429,26 +445,12 @@ nav {
     font-size: 0.8rem;
 }
 
-/* about */
-.about {
-    position: relative;
-    top: 12vh;
-    color: white;
-}
-
-/* shop */
-.shop {
-    position: relative;
-    top: 12vh;
-    color: white;
-}
-
 /* footer */
 footer {
     display: block;
     width: 90%;
     border: 2px solid white;
-    margin: 5%;
+    margin: 10% 5% 5% 5%;
     padding: 10px;
 }
 
@@ -457,6 +459,7 @@ footer {
     justify-content: center;
     align-items: center;
     margin-bottom: 1%;
+    flex-wrap: wrap;
 }
 
 /* the a and form targets all anchor/form elements within footer-links */
@@ -537,4 +540,84 @@ input {
 .subscribe-footer-button:hover {
     background-color: black;
     color: white;
+}
+
+.coming-soon {
+    font-family: "Avenir-LT-W01_85-Heavy1475544";
+    font-size: 3rem;
+    color: white;
+    text-align: center;
+    margin-bottom: 10%;
+}
+
+.animation-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 40px);
+}
+
+.pendulum {
+    margin-top: 15%;
+    /* center */
+    margin-left: 50vw;
+    transform: translate(-50%);
+    width: 220px; /* adjustable */
+    height: 200px; /* adjustable */
+    background-color: black;
+    border-radius: 5%;
+    border-top: 15px solid white;
+    position: relative;
+}
+
+.pendulum_box {
+    display: flex;
+    padding: 120px 0 0 10px;
+    position: absolute;
+    flex: 1;
+}
+
+.ball {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: white;
+    position: relative;
+    transform-origin: 50% -300%;
+}
+
+.ball::before {
+    content: '';
+    width: 2px;
+    height: 120px;
+    background-color: white;
+    left: 18px;
+    top: -120px;
+    position: absolute;
+}
+
+.ball.first {
+    animation: firstball .9s alternate ease-in infinite;
+}
+
+@keyframes firstball {
+    0% {
+        transform: rotate(35deg);
+    }
+    50% {
+        transform: rotate(0deg);
+    }
+}
+
+.ball.last {
+    animation: lastball .9s alternate ease-out infinite;
+}
+
+@keyframes lastball {
+    50% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-35deg);
+    }
 }

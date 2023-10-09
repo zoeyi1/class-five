@@ -484,6 +484,18 @@ carousel {
     margin-bottom: 2rem;
 }
 
+.success-message {
+    font-family: "Avenir-LT-W01_85-Heavy1475544";
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-left: 10%;
+    margin-right: 10%;
+    border-radius: 0;
+    border: 1px solid white;
+}
+
 .indicates-required {
     font-size: 0.8rem;
 }
@@ -507,12 +519,12 @@ carousel {
 }
 
 .intake-form form input[type="text"] {
-    /* Style text input fields */
+
     border: 1px solid white;
 }
 
 .intake-form form input[type="email"] {
-    /* Style text input fields */
+    /* Style email input fields */
     border: 1px solid white;
 }
 

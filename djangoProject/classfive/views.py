@@ -29,6 +29,7 @@ def contact(request):
                 # Your Google account details
                 gmail_user = 'superzoeyi@gmail.com'
                 gmail_password = settings.EMAIL_HOST_PASSWORD
+                #gmail_password =os.environ.get('EMAIL_HOST_PASSWORD')
                 # Create a new email message
                 msg = EmailMessage()
                 msg.set_content(message)

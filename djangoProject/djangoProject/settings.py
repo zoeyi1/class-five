@@ -128,3 +128,37 @@ MEDIA_URL = '/media/'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+
+import ssl
+import certifi
+
+# context = ssl.create_default_context(cafile=certifi.where())
+#context = ssl.create_default_context()
+
+# Use SMTP for sending emails
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+#EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'  # Replace with your SMTP server
+EMAIL_PORT = 587  # Replace with your SMTP server port
+EMAIL_USE_TLS = True  # Use TLS for secure connection
+#import certifi
+
+#EMAIL_SSL_CERTFILE = certifi.where()
+
+#EMAIL_SSL_CERTFILE = "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/certifi/cacert.pem"
+
+#context = ssl.create_default_context(cafile=EMAIL_SSL_CERTFILE)
+#print(context.get_ca_certs())
+
+# If your SMTP server requires authentication, include the following settings
+EMAIL_HOST_USER = 'superzoeyi@gmail.com'  # Your email address
+#EMAIL_HOST_PASSWORD = 'miassister' # Your email password
+EMAIL_HOST_PASSWORD = 'egoi rrwz stys aypt'  # app password thing
+
+# Default 'from' address for emails sent by Django
+DEFAULT_FROM_EMAIL = 'superzoeyi@gmail.com'  # Your default 'from' address
+
+# 'from' address for error messages sent to the site administrators
+SERVER_EMAIL = 'superzoeyi@gmail.com'  # Your error 'from' address

@@ -1,0 +1,26 @@
+{% extends 'classfive/base.html' %}
+{% load static %}
+
+{% block title %}Team | Class Five Climbing{% endblock %}
+
+{% block content %}
+<h2 class = "header">TEAM MEMBERS</h2>
+<div class = "container events">
+  <div class = "row">
+    {% for teamMemberInstance in teamMemberInstances %}
+      <div class="col-md-4">
+        <div class="card card-team">
+          <div class = "card-img-container">
+            <img class="card-img-top" src="{{ teamMemberInstance.img.url }}" alt="Card image">
+          </div>
+          <div class="card-body">
+            <div class="card-title">{{ teamMemberInstance.title }}</div>
+            <p class="card-text">{{ teamMemberInstance.desc }}</p>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+<div> <!-- add to prevent scrolling within the container events div-->
+{% endblock %}

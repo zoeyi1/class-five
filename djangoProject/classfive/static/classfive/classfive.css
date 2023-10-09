@@ -102,6 +102,7 @@ nav {
 
 .navbar-logo {
     width: 50%;
+    padding-bottom: 15px;
 }
 
 /*
@@ -312,10 +313,12 @@ carousel {
 }
 
 .carousel-item:before {
+    /* comment out so the yt video works (idk why i put the first 2 lines there)
     content: "";
     background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.5));
     display: block;
     position: absolute;
+    */
     top: 0;
     width: 100vw;
     height: 100vh;
@@ -334,18 +337,58 @@ carousel {
     margin-bottom: 1rem;
 }
 
+.yt-video {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+}
+
+.yt-video iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
 /* members */
 .events {
     position: relative;
 }
 
-.card {
+.card-events {
     /* navbar height is 93 pixels */
-    top: 12vh;
+    top: 1rem;
     background-color: black;
     border-color: white;
     color: white;
+    border-radius: 0;
     margin-bottom: 10%;
+    height: 600px;
+}
+
+.card-team {
+    /* navbar height is 93 pixels */
+    top: 1rem;
+    background-color: black;
+    border-color: white;
+    color: white;
+    border-radius: 0;
+    margin-bottom: 10%;
+    height: 500px;
+}
+
+
+.card-img-container {
+    height: 400px;
+    overflow: hidden;
+}
+
+.card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center; /* supposed to cut out the edges and leave the center of the image but thats not whats happening rn*/
 }
 
 .card-date {
@@ -443,6 +486,80 @@ carousel {
 
 .indicates-required {
     font-size: 0.8rem;
+}
+
+.intake-form {
+    font-family: "DIN-Next-W01-Light";
+    justify-content: center;
+    top: 1rem;
+    color: white;
+    display: flex;
+}
+
+.header {
+    position: relative;
+    font-family: "Avenir-LT-W01_85-Heavy1475544";
+    color: white;
+    font-size: 3.8rem;
+    text-align: center;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.intake-form form input[type="text"] {
+    /* Style text input fields */
+    border: 1px solid white;
+}
+
+.intake-form form input[type="email"] {
+    /* Style text input fields */
+    border: 1px solid white;
+}
+
+/* dropdown container */
+.intake-form select {
+    /* Add styles here, e.g., background color, border, etc. */
+    background-color: black; /* Set to transparent to remove shading */
+    color: white;
+    border: 1px solid white;
+    border-radius: 4px;
+}
+
+/* Style the dropdown arrow */
+.intake-form select::after {
+    color: white; /* Set the color of the arrow */
+    content: 'v';
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    pointer-events: none; /* Make sure the arrow doesn't interfere with clicking on the dropdown */
+}
+
+/* make the "message:" above the box instead of to the left*/
+#id_message_label {
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+/* for the message box */
+#id_message {
+    background-color: black;
+    color: white;
+
+    /* Add additional styling if needed, such as padding and border */
+    padding: 10px;
+    border: 1px solid white;
+    width: 100%;
+}
+
+.intake-form-btn {
+    justify-content: center;
+    left: 50%;
+    transform: translate(-50%);
+    width: 40%;
+    margin-top: 0;
+    font-size: 1.5rem;
 }
 
 /* footer */

@@ -17,6 +17,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <meta http-equiv="Content-Security-Policy" content="
+  default-src 'self';
+  style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com;
+  font-src 'self' https://cdnjs.cloudflare.com data: http://static.parastorage.com;
+  img-src 'self' data: https://www.youtube.com;
+  frame-src 'self' https://www.youtube.com;
+  report-uri /csp-report-endpoint;
+">
+
     <title>{% block title %}{% endblock %}</title>
 </head>
 <body>
@@ -37,28 +46,33 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="calendar">
-              Community Events
+            <a class="nav-link" href="events">
+              Events
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="shop">
-              Merchandise
+            <a class="nav-link" href="merch">
+              Merch
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="philosophy">
+              Philosophy
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="team">
+              Team
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="training">
-              Training Opportunities
+              Training & Development
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="about">
-              About Us
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="subscribe">
-              Subscribe To Email List
+            <a class="nav-link" href="contact">
+              Contact
             </a>
           </li>
         </ul>

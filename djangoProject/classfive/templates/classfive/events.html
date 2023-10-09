@@ -1,0 +1,28 @@
+{% extends 'classfive/base.html' %}
+{% load static %}
+
+{% block title %}Events | Class Five Climbing{% endblock %}
+
+{% block content %}
+<h2 class = "header">UPCOMING EVENTS</h2>
+  <div class = "container events">
+    <div class = "row">
+      {% for cardInstance in cardInstances %}
+        <div class="col-md-4">
+          <div class="card card-events">
+            <div class = "card-img-container">
+              <img class="card-img" src="{{ cardInstance.img.url }}" alt="Card image">
+            </div>
+            <div class="card-body">
+              <p class = "card-date">{{ cardInstance.date }}</p>
+              <div class="card-title">{{ cardInstance.title }}</div>
+              <p class="card-text">{{ cardInstance.desc }}</p>
+              <a href="{{ cardInstance.link }}" class="btn btn-card">REGISTER</a>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+  <div> <!-- add to prevent scrolling within the container events div-->
+{% endblock %}

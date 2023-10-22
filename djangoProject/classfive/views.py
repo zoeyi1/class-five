@@ -27,7 +27,7 @@ def contact(request):
         if form.is_valid():
             def send_email(subject, message, to_email):
                 # Your Google account details
-                gmail_user = 'superzoeyi@gmail.com'
+                gmail_user = 'info@c5climbing.com'
                 gmail_password = settings.EMAIL_HOST_PASSWORD
                 #gmail_password =os.environ.get('EMAIL_HOST_PASSWORD')
                 # Create a new email message
@@ -50,7 +50,7 @@ def contact(request):
 
             form, success_message = send_email(f'New Inquiry | Type: {form.cleaned_data["inquiry_type"]} | From: {form.cleaned_data["name"]}', 
                        f'Email: {form.cleaned_data["email"]}\n\nMessage: {form.cleaned_data["message"]}', 
-                       "superzoeyi@gmail.com")
+                       "info@c5climbing.com")
             '''
             try:
                 # Your Google account details

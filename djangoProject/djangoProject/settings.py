@@ -153,12 +153,14 @@ EMAIL_USE_TLS = True  # Use TLS for secure connection
 #print(context.get_ca_certs())
 
 # If your SMTP server requires authentication, include the following settings
-EMAIL_HOST_USER = 'superzoeyi@gmail.com'  # Your email address
+#EMAIL_HOST_USER = 'superzoeyi@gmail.com'  # Your email address
 #EMAIL_HOST_PASSWORD = 'miassister' # Your email password
-EMAIL_HOST_PASSWORD = 'egoi rrwz stys aypt'  # app password thing
+#EMAIL_HOST_PASSWORD = 'egoi rrwz stys aypt'  # app password thing
+EMAIL_HOST_USER = 'info@c5climbing.com'
+EMAIL_HOST_PASSWORD = 'yybf hkqk xxin iisz'
 
 # Default 'from' address for emails sent by Django
-DEFAULT_FROM_EMAIL = 'superzoeyi@gmail.com'  # Your default 'from' address
+DEFAULT_FROM_EMAIL = 'info@c5climbing.com'  # Your default 'from' address
 
 # 'from' address for error messages sent to the site administrators
-SERVER_EMAIL = 'superzoeyi@gmail.com'  # Your error 'from' address
+SERVER_EMAIL = 'info@c5climbing.com'  # Your error 'from' address

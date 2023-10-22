@@ -68,10 +68,6 @@ body {
     overflow-x: hidden; /* prevents horizontal scrolling on mobile */
 }
 
-.content {
-    display: block;
-}
-
 li {
     list-style-type: none;
 }
@@ -84,7 +80,7 @@ nav {
 }
 
 .navbar {
-    padding: 0px;
+    padding-bottom: 0.5rem;
 }
 
 .nav-bg-transparent {
@@ -102,7 +98,7 @@ nav {
 
 .navbar-logo {
     width: 50%;
-    padding-bottom: 15px;
+    /* padding-bottom: 15px; */
 }
 
 /*
@@ -117,8 +113,15 @@ nav {
     color: white;
 }
 
+.nav-separator {
+    font-family: "DIN-Next-W01-Light";
+    padding-top: 0.4rem;
+    font-size: 1.3rem;
+    color: white;
+}
+
 .nav-link {
-    padding: 0.5rem !important;
+    /* padding: 0.5rem !important; */
     margin-left: 1rem !important;
     margin-right: 1rem !important;
     color: white;
@@ -204,6 +207,14 @@ nav {
     .cta-title {
         font-size: 3rem;
     }
+    nav {
+        width: 700px;
+    }
+    @media (max-width: 768px) {
+        .navbar-brand, .navbar-toggler {
+            display: inline-block;
+        }
+    }
 }
 
 .cta-text {
@@ -270,8 +281,8 @@ nav {
     fill: currentColor;
 }
 
-carousel {
-    margin-top: 10vh !important;
+.carousel {
+    margin-top: 3vh !important;
 }
 
 .carousel-button {
@@ -285,9 +296,10 @@ carousel {
 
 /* content */
 .content {
+    display: block;
     position: relative;
     overflow-x: hidden;
-    margin-top: 3vh;
+    margin-top: 2vh;
 }
 
 /* logo */
@@ -338,6 +350,7 @@ carousel {
 }
 
 .yt-video {
+    padding-top: 0rem;
     position: relative;
     width: 100%;
     padding-bottom: 56.25%; /* 16:9 aspect ratio */
@@ -364,7 +377,7 @@ carousel {
     color: white;
     border-radius: 0;
     margin-bottom: 10%;
-    height: 600px;
+    height: 800px;
 }
 
 .card-team {
@@ -503,7 +516,7 @@ carousel {
 .intake-form {
     font-family: "DIN-Next-W01-Light";
     justify-content: center;
-    top: 1rem;
+    padding-top: 1rem;
     color: white;
     display: flex;
 }
@@ -515,11 +528,10 @@ carousel {
     font-size: 3.8rem;
     text-align: center;
     margin-top: 2.5rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 .intake-form form input[type="text"] {
-
     border: 1px solid white;
 }
 
@@ -530,8 +542,7 @@ carousel {
 
 /* dropdown container */
 .intake-form select {
-    /* Add styles here, e.g., background color, border, etc. */
-    background-color: black; /* Set to transparent to remove shading */
+    background-color: black;
     color: white;
     border: 1px solid white;
     border-radius: 4px;

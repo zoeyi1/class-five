@@ -77,6 +77,8 @@ nav {
     animation: slideInTop ease 2s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
+    display: flex;
+    align-items: center;
 }
 
 .navbar {
@@ -92,8 +94,9 @@ nav {
 }
 
 .navbar-brand {
-    margin-left: 1.5rem;
-    width: 350px;
+    margin-left: 1rem;
+    width: 280px;
+    margin-right: 0;
 }
 
 .navbar-logo {
@@ -111,6 +114,7 @@ nav {
     font-family: "DIN-Next-W01-Light";
     font-size: 1rem;
     color: white;
+    background-color: black;
 }
 
 .nav-separator {
@@ -121,11 +125,15 @@ nav {
 }
 
 .nav-link {
-    /* padding: 0.5rem !important; */
+    padding: 0.5rem !important;
     margin-left: 1rem !important;
     margin-right: 1rem !important;
     color: white;
     border: 1px solid transparent;
+}
+
+.nav-link-last {
+    margin-right: 1.5rem !important;
 }
 
 .nav-link:hover {
@@ -135,14 +143,14 @@ nav {
 }
 
 .navbar-toggler {
-    margin-left: 1.5rem;
-    margin-right: 1.5rem;
     border-color: black;
     color: white;
+    margin-right: 0.5rem;
 }
 
 .navbar-toggler:hover {
-    border-color: white;
+    border: 1px solid white;
+    border-radius: 0;
 }
 
 .navbar-toggler-icon {
@@ -203,6 +211,7 @@ nav {
 }
 
 /* mobile devices */
+/* commented this out because it was messing with the navbar toggler icon
 @media (max-width: 767px) {
     .cta-title {
         font-size: 3rem;
@@ -214,6 +223,100 @@ nav {
         .navbar-brand, .navbar-toggler {
             display: inline-block;
         }
+    }
+}*/
+
+.show-on-mobile {
+    display: none;
+}
+
+@media (max-width: 450px) {
+    /*
+    .content {
+        width: 80%;
+        margin: 0 auto;
+        text-align: center;
+        justify-content: center;
+    }
+    .pendulum {
+        margin-left: 40vw !important;
+    } */
+    .plastic-classic-img {
+        width: 180% !important;
+        top: 28% !important;
+    }
+    .plastic-classic-text {
+        top: 43% !important;
+    }
+    .show-on-mobile {
+        display: block;
+        top: 33vh;
+    }
+    .content {
+        margin-top: 4vh !important;
+    }
+    .carousel-img {
+        position: absolute;
+        top: 25%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: auto;
+        height: 50vh;
+        object-fit: cover;
+    }
+    .carousel-title {
+        font-size: 1.9rem !important;
+    }
+    .carousel-text {
+        font-size: 90%;
+        width: 100% !important;
+    }
+    .card-events {
+        height: auto !important;
+    }
+    .card-body {
+        padding-bottom: 1rem;
+    }
+    .card-img-container {
+        height: 80vw !important;
+    }
+    .header {
+        font-size: 3rem !important;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+    .nav-link-last {
+        margin-right: 1rem !important;
+        padding-right: 1rem !important;
+    }
+    .pendulum {
+        margin-top: 25vh !important;
+        width: 110px !important; /* adjustable */
+        height: 100px !important; /* adjustable */
+        border-top: 7px solid white !important;
+    }
+    
+    .pendulum_box {
+        padding: 60px 0 0 5px !important;
+    }
+    
+    .ball {
+        height: 20px !important;
+        width: 20px !important;
+    }
+    
+    .ball::before {
+        height: 60px !important;
+        left: 9px !important;
+        top: -60px !important;
+    }
+    .coming-soon {
+        font-size: 1.5rem !important;
+        margin-bottom: 15vh !important;
+    }
+    .team-text {
+        font-size: 1rem !important;
     }
 }
 
@@ -285,6 +388,14 @@ nav {
     margin-top: 3vh !important;
 }
 
+.carousel-img {
+    width: 100%;
+    /*
+    height: 100%;
+    left: 100%;
+    transform: translate(-25%);*/
+}
+
 .carousel-button {
     font-size: 1.2rem;
     margin: 0;
@@ -343,6 +454,13 @@ nav {
     align-items: center;
 }
 
+.carousel-title {
+    font-family: "Avenir-LT-W01_85-Heavy1475544";
+    font-size: 3rem;
+    margin-top: 0.6rem;
+    margin-bottom: 0.8rem;
+}
+
 .carousel-text {
     width: 60%;
     margin: 0 auto;
@@ -377,7 +495,7 @@ nav {
     color: white;
     border-radius: 0;
     margin-bottom: 10%;
-    height: 800px;
+    height: 600px;
 }
 
 .card-team {
@@ -393,7 +511,7 @@ nav {
 
 
 .card-img-container {
-    height: 400px;
+    height: 375px;
     overflow: hidden;
 }
 
@@ -402,6 +520,7 @@ nav {
     height: 100%;
     object-fit: cover;
     object-position: center center; /* supposed to cut out the edges and leave the center of the image but thats not whats happening rn*/
+    border-radius: 0;
 }
 
 .card-date {
@@ -527,8 +646,13 @@ nav {
     color: white;
     font-size: 3.8rem;
     text-align: center;
-    margin-top: 2.5rem;
+    margin-top: 3.5rem;
     margin-bottom: 0.5rem;
+}
+
+.intake-form {
+    width: 80vw;
+    margin-left: 10vw;
 }
 
 .intake-form form input[type="text"] {
@@ -690,6 +814,19 @@ input {
     margin-bottom: 10%;
 }
 
+.team-img {
+    margin-top: 2rem;
+    width: 100%;
+}
+
+.team-text {
+    font-family: "DIN-Next-W01-Light";
+    font-size: 1.2rem;
+    justify-content: center;
+    color: white;
+    margin-top: 3rem;
+}
+
 .animation-container {
     display: flex;
     justify-content: center;
@@ -760,4 +897,14 @@ input {
     100% {
         transform: rotate(-35deg);
     }
+}
+
+.plastic-classic-img {
+    width: 80%;
+    height: auto;
+    margin: auto;
+}
+
+.plastic-classic-text {
+    top: 62vh;
 }

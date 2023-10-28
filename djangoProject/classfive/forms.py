@@ -6,9 +6,10 @@ class InquiryForm(forms.Form):
     inquiry_type = forms.ChoiceField(
         label='Type of Inquiry',
         choices=[
-            ('general', 'General Inquiry'),
-            ('support', 'Technical Support'),
-            ('feedback', 'Feedback'),
+            ('General', 'General Inquiry'),
+            ('Training', 'Training Opportunities'),
+            ('Feedback', 'Feedback'),
+            ('Partnership', 'Brand Partnerships')
         ]
     )
     message = forms.CharField(label='Message', widget=forms.Textarea)

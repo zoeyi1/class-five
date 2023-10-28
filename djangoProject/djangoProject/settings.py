@@ -21,10 +21,18 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-45pgj$%qyskv)ye+ycam8a=@9=)$ij7-(yc#gn0c7g4p)49v#b'
+SECRET_KEY = "ylhfp2s@a*7pw&he7f%_y@2l0b=co%+k6_(@)t_l9l$kyem6(z" 
+#SECRET_KEY = os.environ.get('SECRET_KEY')
+
+SECURE_HSTS_SECONDS = 31536000
+SECURE_SSL_REDIRECT = False
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
+X_FRAME_OPTIONS = 'DENY'
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False 
 
 ALLOWED_HOSTS = [
     "*",
@@ -119,7 +127,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_ROOT = "/opt/mydjangoapp/static/"
+STATIC_URL = '/static/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
@@ -164,3 +173,23 @@ DEFAULT_FROM_EMAIL = 'info@c5climbing.com'  # Your default 'from' address
 
 # 'from' address for error messages sent to the site administrators
 SERVER_EMAIL = 'info@c5climbing.com'  # Your error 'from' address
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'file': {
+            'level': 'DEBUG',
+            'class': 'logging.FileHandler',
+            'filename': os.path.join(BASE_DIR, 'logs/debug.log'),
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['file'],
+            'level': 'DEBUG',
+            'propagate': True,
+        },
+    },
+}
+

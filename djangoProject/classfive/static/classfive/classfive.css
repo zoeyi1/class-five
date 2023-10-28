@@ -243,10 +243,19 @@ nav {
     } */
     .plastic-classic-img {
         width: 180% !important;
-        top: 28% !important;
+        top: 34% !important;
     }
     .plastic-classic-text {
-        top: 43% !important;
+        top: 52% !important;
+    }
+    @media (max-width: 404px) {
+        .plastic-classic-img {
+            width: 180% !important;
+            top: 30% !important;
+        }
+        .plastic-classic-text {
+            top: 46% !important;
+        }
     }
     .show-on-mobile {
         display: block;
@@ -906,5 +915,5 @@ input {
 }
 
 .plastic-classic-text {
-    top: 62vh;
+    top: 60vh;
 }

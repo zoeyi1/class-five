@@ -2,6 +2,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YJE6P0M9KE"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-YJE6P0M9KE');
+    </script>
     <!-- Latest compiled and minified CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -17,14 +25,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta http-equiv="Content-Security-Policy" content="
-  default-src 'self';
-  style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com;
-  font-src 'self' https://cdnjs.cloudflare.com data: http://static.parastorage.com;
-  img-src 'self' data: https://www.youtube.com;
-  frame-src 'self' https://www.youtube.com;
-  report-uri /csp-report-endpoint;
-">
     <link rel="icon" href="{% static '/classfive/images/favicon.png' %}">
     <title>{% block title %}{% endblock %}</title>
 </head>
@@ -62,7 +62,7 @@
           </li>
           <li class="nav-item">
             <a class="nav-link" href="team">
-              Team
+              Team Class Five
             </a>
           </li>
           <!--

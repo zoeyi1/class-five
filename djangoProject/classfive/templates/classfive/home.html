@@ -3,94 +3,14 @@
 
 {% block title %}Home | Class Five Climbing{% endblock %}
 
-{% block content %}    <!-- overrides content block in base.html-->
-  <div class = "content">
-    <!-- Carousel -->
-    <div id="demo" class="carousel slide" data-bs-interval="false">
+{% block content %} 
 
-      <!-- Indicators/dots -->
-      <div class="carousel-indicators">
-        <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
-        <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
-        {% for slideInstance in slideInstances %}
-          <button type="button" data-bs-target="#demo" data-bs-slide-to="{{ forloop.counter }}"></button>
-        {% endfor %}
-      </div>
-      
-      <!-- The slideshow/carousel -->
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="{% static '/classfive/images/plastic_classic3.jpg' %}" class="d-block carousel-img plastic-classic-img">
-          <div class="carousel-caption plastic-classic-text">
-            <p class = "carousel-text">An all-levels community bouldering competition featuring $10K+ in podium prizes and a $5K cash purse! Climbing and recovery vendors, food trucks, raffle prizes, plus a world cup style open finals showcase. Hosted at The Wall Climbing Gym on 12.09.23.</p>
-            <a href = "https://www.eventbrite.com/e/the-plastic-classic-tickets-712519283357?aff=oddtdtcreator" type="button" class="btn btn-outline rounded-0 carousel-button">REGISTER</a>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <div class="embed-responsive embed-responsive-16by9 yt-video">
-            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/oWKfyp4bQo0?" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
-            <div class="carousel-caption show-on-mobile">
-              <h1 class = "carousel-title"></h1>
-              <p class = "carousel-text">In climbing, flow is everything. Moving fluidly from one move to the next until the top, fully immersed in the movement. Dive into the mind of Class Five and La Sportiva climbing athlete Ross Fulkerson as he enters his flow state.</p>
-              <a href = "../team" type="button" class="btn btn-outline rounded-0 carousel-button">TEAM MEMBERS</a>
-            </div>
-          </div>
-        </div>
-        {% for slideInstance in slideInstances %}
-        <div class="carousel-item">
-          <img src="{{ slideInstance.img.url }}" class="d-block carousel-img">
-          <div class="carousel-caption">
-            <h1 class = "carousel-title">{{ slideInstance.title }}</h1>
-            <p class = "carousel-text">{{ slideInstance.desc }}</p>
-            <a href = "{{ slideInstance.link }}" type="button" class="btn btn-outline rounded-0 carousel-button">{{ slideInstance.button }}</a>
-          </div>
-        </div>
-        {% endfor %}
-      </div>
-      
-      <!-- Left and right controls/icons -->
-      <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon"></span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
-        <span class="carousel-control-next-icon"></span>
-      </button>
+  <div class="row">
+
+    <div class="embed-responsive embed-responsive-16by9 yt-video">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/oWKfyp4bQo0?" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
 
-    <!-- <img class = "logo-lg" src = "{% static '/classfive/images/logoLg.png' %}" alt = "logo-lg"> -->
-
-    <!--
-    <a href="#scroll-section" data-bs-offset="200">
-      <button type="button" class="btn btn-chevron">
-        <svg xmlns="http://www.w3.org/2000/svg" class="bi bi-chevron-down" viewBox="0 0 16 16">
-          <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
-        </svg>
-      </button>
-    </a>
-    -->
-
-    
-
-    <!--
-    {% for eventInstance in eventInstances %}
-
-    <div class="d-block w-100 embed-responsive embed-responsive-16by9">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/oWKfyp4bQo0?si=YUZCfCAqsdbPc-wX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-    </div>
-
-    <div class = "container-fluid cta">
-      <div class="row align-items-stretch justify-content-center">
-        <div class="col-md-6 text-md-end">
-          <img class = "img-fluid col-img" src="{{ eventInstance.img.url }}" alt="Card image">
-        </div>
-        <div class="col-md-6 text-md-start">
-          <div class = "cta-title">{{ eventInstance.title }}</div>
-          <div class = "cta-text">{{ eventInstance.desc|safe}}</div>
-          <a href = "{{ eventInstance.link }}" type="button" class="btn btn-outline rounded-0">REGISTER</a>
-        </div>
-      </div>
-    </div>
-    {% endfor %}
-    -->
+    <p class="team-text">In climbing, flow is everything. Moving fluidly from one move to the next until the top, fully immersed in the movement. Dive into the mind of Class Five and La Sportiva climbing athlete Ross Fulkerson as he enters his flow state.</p>
   </div>
 {% endblock %}

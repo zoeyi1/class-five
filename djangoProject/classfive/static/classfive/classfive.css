@@ -591,6 +591,16 @@ nav {
     font-size: 0.8rem;
 }
 
+.header {
+    position: relative;
+    font-family: "Avenir-LT-W01_85-Heavy1475544";
+    color: white;
+    font-size: 3.8rem;
+    text-align: center;
+    margin-top: 3.5rem;
+    margin-bottom: 0.5rem;
+}
+
 .intake-form {
     font-family: "DIN-Next-W01-Light";
     justify-content: center;
@@ -601,16 +611,6 @@ nav {
 
 .intake-form form p {
     border-radius: 0;
-}
-
-.header {
-    position: relative;
-    font-family: "Avenir-LT-W01_85-Heavy1475544";
-    color: white;
-    font-size: 3.8rem;
-    text-align: center;
-    margin-top: 3.5rem;
-    margin-bottom: 0.5rem;
 }
 
 .intake-form {
@@ -627,6 +627,45 @@ nav {
     border: 1px solid white;
 }
 
+
+/* dropdown container */
+.intake-form select {
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+    border-radius: 0px;
+}
+
+/* Style the dropdown arrow */
+.intake-form select::after {
+    color: white;
+    /* Set the color of the arrow */
+    content: 'v';
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    /* Make sure the arrow doesn't interfere with clicking on the dropdown */
+}
+
+/* make the "message:" above the box instead of to the left*/
+#id_message_label {
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+/* for the message box */
+#id_message {
+    background-color: black;
+    color: white;
+
+    /* Add additional styling if needed, such as padding and border */
+    padding: 10px;
+    border: 1px solid white;
+    width: 100%;
+}
+
 .intake-form-btn {
     justify-content: center;
     left: 50%;
@@ -635,6 +674,8 @@ nav {
     margin-top: 0;
     font-size: 1.5rem;
 }
+
+
 
 /* footer */
 footer {

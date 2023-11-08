@@ -142,6 +142,11 @@ nav {
     /* fa-bars, fa-navicon */
 }
 
+nav a {
+    align-self: flex-start;
+    /* Aligns this specific item to the top */
+}
+
 /* text */
 .text {
     position: relative;
@@ -183,20 +188,6 @@ nav {
 
     .plastic-classic-text {
         top: 52vh !important;
-    }
-
-    @media (max-width: 404px) {
-        .plastic-classic-img {
-            width: 100% !important;
-            height: auto !important;
-            max-height: 50vh !important;
-            object-fit: contain !important;
-            /* This will scale the image down to fit within the area, no cropping */
-        }
-
-        .plastic-classic-text {
-            top: 52vh !important;
-        }
     }
 
     .show-on-mobile {

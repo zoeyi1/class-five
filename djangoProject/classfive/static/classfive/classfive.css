@@ -3,26 +3,27 @@
     font-family: "DIN-Next-W01-Light";
     src: url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/3e0b2cd7-9657-438b-b4af-e04122e8f1f7.eot?#iefix");
     src: url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/3e0b2cd7-9657-438b-b4af-e04122e8f1f7.eot?#iefix") format("eot"),
-    url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/bc176270-17fa-4c78-a343-9fe52824e501.woff") format("woff"),
-    url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/3516f91d-ac48-42cd-acfe-1be691152cc4.ttf") format("truetype"),
-    url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/d1b1e866-a411-42ba-8f75-72bf28e23694.svg#d1b1e866-a411-42ba-8f75-72bf28e23694") format("svg");
+        url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/bc176270-17fa-4c78-a343-9fe52824e501.woff") format("woff"),
+        url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/3516f91d-ac48-42cd-acfe-1be691152cc4.ttf") format("truetype"),
+        url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/d1b1e866-a411-42ba-8f75-72bf28e23694.svg#d1b1e866-a411-42ba-8f75-72bf28e23694") format("svg");
 }
 
 @font-face {
     font-display: block;
-    font-family:"Avenir-LT-W01_85-Heavy1475544";
-    src:url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/6af9989e-235b-4c75-8c08-a83bdaef3f66.eot?#iefix");
-    src:url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/6af9989e-235b-4c75-8c08-a83bdaef3f66.eot?#iefix") format("eot"),
-    url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/d513e15e-8f35-4129-ad05-481815e52625.woff2") format("woff2"),
-    url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/61bd362e-7162-46bd-b67e-28f366c4afbe.woff") format("woff"),
-    url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/ccd17c6b-e7ed-4b73-b0d2-76712a4ef46b.ttf") format("truetype"),
-    url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/20577853-40a7-4ada-a3fb-dd6e9392f401.svg#20577853-40a7-4ada-a3fb-dd6e9392f401") format("svg");
+    font-family: "Avenir-LT-W01_85-Heavy1475544";
+    src: url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/6af9989e-235b-4c75-8c08-a83bdaef3f66.eot?#iefix");
+    src: url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/6af9989e-235b-4c75-8c08-a83bdaef3f66.eot?#iefix") format("eot"),
+        url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/d513e15e-8f35-4129-ad05-481815e52625.woff2") format("woff2"),
+        url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/61bd362e-7162-46bd-b67e-28f366c4afbe.woff") format("woff"),
+        url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/ccd17c6b-e7ed-4b73-b0d2-76712a4ef46b.ttf") format("truetype"),
+        url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/20577853-40a7-4ada-a3fb-dd6e9392f401.svg#20577853-40a7-4ada-a3fb-dd6e9392f401") format("svg");
 }
 
 @keyframes fadeInAnimation {
     0% {
         opacity: 0;
     }
+
     100% {
         opacity: 1;
     }
@@ -30,26 +31,19 @@
 
 @keyframes slideInTop {
     0% {
-      transform: translateY(-100%);
+        transform: translateY(-100%);
     }
+
     100% {
-      transform: translateY(0);
+        transform: translateY(0);
     }
 }
 
 @keyframes slideInBottom {
     0% {
-      left: 50%;
-      transform: translate(-50%, 200%);
+        left: 50%;
+        transform: translate(-50%, 200%);
     }
-}
-
-.font-1 {
-    font-family: "DIN-Next-W01-Light";
-}
-
-.font-2 {
-    font-family: "Avenir-LT-W01_85-Heavy1475544";
 }
 
 /* container */
@@ -65,7 +59,8 @@ body {
     animation: fadeInAnimation ease 2s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
-    overflow-x: hidden; /* prevents horizontal scrolling on mobile */
+    overflow-x: hidden;
+    /* prevents horizontal scrolling on mobile */
 }
 
 li {
@@ -85,10 +80,6 @@ nav {
     padding-bottom: 0.5rem;
 }
 
-.nav-bg-transparent {
-    background-color: rgba(0, 0, 0, 0.5) !important;
-}
-
 .nav-bg-black {
     background-color: black !important;
 }
@@ -104,24 +95,11 @@ nav {
     /* padding-bottom: 15px; */
 }
 
-/*
-.navbar-brand:hover {
-    cursor: url("images/cursor.png"), url("images/logoLg.png"), auto;
-}
-*/
-
 .nav-item {
     font-family: "DIN-Next-W01-Light";
     font-size: 1rem;
     color: white;
     background-color: black;
-}
-
-.nav-separator {
-    font-family: "DIN-Next-W01-Light";
-    padding-top: 0.4rem;
-    font-size: 1.3rem;
-    color: white;
 }
 
 .nav-link {
@@ -160,29 +138,8 @@ nav {
 
 .navbar-toggler-icon::before {
     font-family: FontAwesome;
-    content: "\f0c9"; /* fa-bars, fa-navicon */
-}
-
-.dropdown-menu {
-    background-color: black;
-    color:white;
-}
-
-.dropdown-item {
-    background-color: transparent;
-    color: white;
-    border: 1px solid transparent;
-}
-
-.dropdown-item:hover {
-    /* cursor: url("images/cursor.png"), url("images/logoLg.png"), auto; */
-    background-color: black;
-    color: white;
-    border: 1px solid white;
-}
-
-.dropdown:hover .dropdown-menu{
-    display: block;
+    content: "\f0c9";
+    /* fa-bars, fa-navicon */
 }
 
 /* text */
@@ -210,121 +167,117 @@ nav {
     line-height: 1.2;
 }
 
-/* mobile devices */
-/* commented this out because it was messing with the navbar toggler icon
-@media (max-width: 767px) {
-    .cta-title {
-        font-size: 3rem;
-    }
-    nav {
-        width: 700px;
-    }
-    @media (max-width: 768px) {
-        .navbar-brand, .navbar-toggler {
-            display: inline-block;
-        }
-    }
-}*/
 
 .show-on-mobile {
     display: none;
 }
 
 @media (max-width: 450px) {
-    /*
-    .content {
-        width: 80%;
-        margin: 0 auto;
-        text-align: center;
-        justify-content: center;
-    }
-    .pendulum {
-        margin-left: 40vw !important;
-    } */
+
     .plastic-classic-img {
-	width: 100% !important;
+        width: 100% !important;
         height: auto !important;
         max-height: 50vh !important;
         object-fit: contain !important;
     }
+
     .plastic-classic-text {
         top: 52vh !important;
     }
+
     @media (max-width: 404px) {
-        .plastic-classic-img { 
-	    width: 100% !important;
+        .plastic-classic-img {
+            width: 100% !important;
             height: auto !important;
             max-height: 50vh !important;
-            object-fit: contain !important; /* This will scale the image down to fit within the area, no cropping */
+            object-fit: contain !important;
+            /* This will scale the image down to fit within the area, no cropping */
         }
+
         .plastic-classic-text {
             top: 52vh !important;
         }
     }
+
     .show-on-mobile {
         display: block;
         top: 33vh;
     }
+
     .content {
         margin-top: 4vh !important;
     }
+
     .carousel-img {
         position: absolute;
         width: auto;
         height: auto;
         object-fit: cover;
     }
+
     .carousel-title {
         font-size: 1.9rem !important;
     }
+
     .carousel-text {
         font-size: 90%;
         width: 100% !important;
     }
+
     .card-events {
         height: auto !important;
     }
+
     .card-body {
         padding-bottom: 1rem;
     }
+
     .card-img-container {
         height: 80vw !important;
     }
+
     .header {
         font-size: 3rem !important;
     }
+
     h1 {
         font-size: 2rem;
     }
+
     .nav-link-last {
         margin-right: 1rem !important;
         padding-right: 1rem !important;
     }
+
     .pendulum {
         margin-top: 25vh !important;
-        width: 110px !important; /* adjustable */
-        height: 100px !important; /* adjustable */
+        width: 110px !important;
+        /* adjustable */
+        height: 100px !important;
+        /* adjustable */
         border-top: 7px solid white !important;
     }
-    
+
     .pendulum_box {
         padding: 60px 0 0 5px !important;
     }
-    
+
     .ball {
         height: 20px !important;
         width: 20px !important;
     }
-    
+
     .ball::before {
         height: 60px !important;
         left: 9px !important;
         top: -60px !important;
     }
+
     .coming-soon {
         font-size: 1.5rem !important;
         margin-bottom: 15vh !important;
     }
+
     .team-text {
         font-size: 1rem !important;
     }
@@ -401,10 +354,6 @@ nav {
 
 .carousel-img {
     width: 100%;
-    /*
-    height: 100%;
-    left: 100%;
-    transform: translate(-25%);*/
 }
 
 .carousel-button {
@@ -447,12 +396,6 @@ nav {
 }
 
 .carousel-item:before {
-    /* comment out so the yt video works (idk why i put the first 2 lines there)
-    content: "";
-    background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.5));
-    display: block;
-    position: absolute;
-    */
     top: 0;
     width: 100vw;
     height: 100vh;
@@ -482,7 +425,8 @@ nav {
     padding-top: 0rem;
     position: relative;
     width: 100%;
-    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    padding-bottom: 56.25%;
+    /* 16:9 aspect ratio */
 }
 
 .yt-video iframe {
@@ -530,7 +474,8 @@ nav {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center center; /* supposed to cut out the edges and leave the center of the image but thats not whats happening rn*/
+    object-position: center center;
+    /* supposed to cut out the edges and leave the center of the image but thats not whats happening rn*/
     border-radius: 0;
 }
 
@@ -573,7 +518,8 @@ nav {
     justify-content: center;
     background-color: black;
     width: 80%;
-    margin-left: 50vw;     /* center */
+    margin-left: 50vw;
+    /* center */
     /* center within center */
     left: 50%;
     transform: translate(-50%);
@@ -583,7 +529,8 @@ nav {
 .response {
     font-family: "Avenir-LT-W01_85-Heavy1475544";
     font-size: 1.5rem;
-    color: white; /* Replace with your desired color */
+    color: white;
+    /* Replace with your desired color */
 }
 
 .subscribe-header {
@@ -618,7 +565,8 @@ nav {
 }
 
 .subscribe-button {
-    margin-left: auto;     /* center */
+    margin-left: auto;
+    /* center */
     /* center within center */
     left: 50%;
     transform: translate(-50%);
@@ -679,42 +627,6 @@ nav {
     border: 1px solid white;
 }
 
-/* dropdown container */
-.intake-form select {
-    background-color: black;
-    color: white;
-    border: 1px solid white;
-    border-radius: 0px;
-}
-
-/* Style the dropdown arrow */
-.intake-form select::after {
-    color: white; /* Set the color of the arrow */
-    content: 'v';
-    position: absolute;
-    top: 50%;
-    right: 10px;
-    transform: translateY(-50%);
-    pointer-events: none; /* Make sure the arrow doesn't interfere with clicking on the dropdown */
-}
-
-/* make the "message:" above the box instead of to the left*/
-#id_message_label {
-    color: #fff;
-    margin-bottom: 10px;
-}
-
-/* for the message box */
-#id_message {
-    background-color: black;
-    color: white;
-
-    /* Add additional styling if needed, such as padding and border */
-    padding: 10px;
-    border: 1px solid white;
-    width: 100%;
-}
-
 .intake-form-btn {
     justify-content: center;
     left: 50%;
@@ -744,7 +656,8 @@ footer {
 /* the a and form targets all anchor/form elements within footer-links */
 .footer-links a,
 .footer-links form {
-    margin: 0 20px; /* 0 vertical padding, 10px horizontal padding */
+    margin: 0 20px;
+    /* 0 vertical padding, 10px horizontal padding */
 }
 
 .footer-logo {
@@ -800,14 +713,6 @@ input {
     border-radius: 0px;
 }
 
-select {
-    border-radius: 0px;
-}
-
-textarea {
-    border-radius: 0px;
-}
-
 ::placeholder {
     font-family: "DIN-Next-W01-Light";
     font-size: 1rem;
@@ -822,7 +727,8 @@ textarea {
     font-size: 1rem;
     height: auto;
     display: flex;
-    align-items: center;/*
+    align-items: center;
+    /*
     padding: 3px 8px; */
 }
 
@@ -853,20 +759,15 @@ textarea {
     margin-top: 3rem;
 }
 
-.animation-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: calc(100vh - 40px);
-}
-
 .pendulum {
     margin-top: 15%;
     /* center */
     margin-left: 50vw;
     transform: translate(-50%);
-    width: 220px; /* adjustable */
-    height: 200px; /* adjustable */
+    width: 220px;
+    /* adjustable */
+    height: 200px;
+    /* adjustable */
     background-color: black;
     border-radius: 5%;
     border-top: 15px solid white;
@@ -907,6 +808,7 @@ textarea {
     0% {
         transform: rotate(35deg);
     }
+
     50% {
         transform: rotate(0deg);
     }
@@ -920,12 +822,13 @@ textarea {
     50% {
         transform: rotate(0deg);
     }
+
     100% {
         transform: rotate(-35deg);
     }
 }
 
-.plastic-classic-img { 
+.plastic-classic-img {
     margin: auto;
     width: 100%;
     height: auto;

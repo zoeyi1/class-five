@@ -1,0 +1,16 @@
+{% extends 'classfive/base.html' %}
+{% load static %}
+
+{% block title %}About | Class Five Climbing{% endblock %}
+
+{% block content %}
+  <div class = "row">
+    <img src = "{% static '/classfive/images/team.jpg' %}" class = "team-img">
+    <p class = "team-text">
+    Team Class Five is a competitive rock climbing team and elite training program that prepares athletes for the highest level of competition.<br/><br/>
+    Established in 2021, founder and head coach Alvaro Rangel has 12+ years of experience as a route setter and climbing coach and has coached for Team USA at adult and youth world championships.<br/><br/>
+Over the past two years, the Class Five youth team has won national team banners for performing as one of the top 3 teams in the nation. Small but mighty, and based out of San Diego, CA we believe in dreaming big and trying hard!
+    </p>
+  </div>
+<div> <!-- add to prevent scrolling within the container events div-->
+{% endblock %}

@@ -84,6 +84,9 @@ def merch(request):
 def training(request):
     return render(request, "classfive/training.html")
 
+def about(request):
+    return render(request, "classfive/about.html")
+
 def team(request):
     teamMemberInstances = TeamMember.objects.all()
     return render(request, "classfive/team.html", {"teamMemberInstances": teamMemberInstances})

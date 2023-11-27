@@ -417,6 +417,16 @@ nav a {
     border-color: white;
 }
 
+.btn-cta {
+    font-family: "Avenir-LT-W01_85-Heavy1475544";
+    position: relative;
+    background-color: white;
+    color: black;
+    border-color: white;
+    font-size: 1.5rem;
+    border-radius: 0;
+}
+
 /* subscribe */
 .subscribe {
     display: flex;
@@ -695,6 +705,7 @@ input {
 .team-img {
     width: 100%;
     height: auto;
+    padding: 0;
 }
 
 .team-text {
@@ -789,8 +800,8 @@ input {
 }
 
 @media (max-width: 450px) {
-    .row {
-        /* margin-top: 5% !important; */
+    .btn-cta {
+        font-size: 1rem;
     }
     .plastic-classic-img {
         width: 100%;

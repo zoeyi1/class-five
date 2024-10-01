@@ -21,15 +21,15 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "ylhfp2s@a*7pw&he7f%_y@2l0b=co%+k6_(@)t_l9l$kyem6(z" 
+SECRET_KEY = "ylhfp2s@a*7pw&he7f%_y@2l0b=co%+k6_(@)t_l9l$kyem6(z"
 #SECRET_KEY = os.environ.get('SECRET_KEY')
 
 SECURE_HSTS_SECONDS = 31536000
 SECURE_SSL_REDIRECT = False
 SESSION_COOKIE_SECURE = True
 CSRF_COOKIE_SECURE = True
-X_FRAME_OPTIONS = 'DENY'
-SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+X_FRAME_OPTIONS = "DENY"
+SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
@@ -42,53 +42,57 @@ ALLOWED_HOSTS = [
 # Application definition
 
 INSTALLED_APPS = [
-    'classfive',
-    'django.contrib.admin',
-    'django.contrib.auth',
-    'django.contrib.contenttypes',
-    'django.contrib.sessions',
-    'django.contrib.messages',
-    'django.contrib.staticfiles',
+    "classfive",
+    "django.contrib.admin",
+    "django.contrib.auth",
+    "django.contrib.contenttypes",
+    "django.contrib.sessions",
+    "django.contrib.messages",
+    "django.contrib.staticfiles",
+    "django_recaptcha",
 ]
+
+RECAPTCHA_PUBLIC_KEY = "6LciCFUqAAAAAPWTYd1tD2iXkUKwik69eC2sALjJ"
+RECAPTCHA_PRIVATE_KEY = "6LciCFUqAAAAACexWfAqdoZwd7LbClWOR38wdfBM"
 
 MIDDLEWARE = [
-    'django.middleware.security.SecurityMiddleware',
-    'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
-    'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    "django.middleware.security.SecurityMiddleware",
+    "django.contrib.sessions.middleware.SessionMiddleware",
+    "django.middleware.common.CommonMiddleware",
+    "django.middleware.csrf.CsrfViewMiddleware",
+    "django.contrib.auth.middleware.AuthenticationMiddleware",
+    "django.contrib.messages.middleware.MessageMiddleware",
+    "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
-ROOT_URLCONF = 'djangoProject.urls'
+ROOT_URLCONF = "djangoProject.urls"
 
 TEMPLATES = [
     {
-        'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
-        'APP_DIRS': True,
-        'OPTIONS': {
-            'context_processors': [
-                'django.template.context_processors.debug',
-                'django.template.context_processors.request',
-                'django.contrib.auth.context_processors.auth',
-                'django.contrib.messages.context_processors.messages',
+        "BACKEND": "django.template.backends.django.DjangoTemplates",
+        "DIRS": [],
+        "APP_DIRS": True,
+        "OPTIONS": {
+            "context_processors": [
+                "django.template.context_processors.debug",
+                "django.template.context_processors.request",
+                "django.contrib.auth.context_processors.auth",
+                "django.contrib.messages.context_processors.messages",
             ],
         },
     },
 ]
 
-WSGI_APPLICATION = 'djangoProject.wsgi.application'
+WSGI_APPLICATION = "djangoProject.wsgi.application"
 
 
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+    "default": {
+        "ENGINE": "django.db.backends.sqlite3",
+        "NAME": BASE_DIR / "db.sqlite3",
     }
 }
 
@@ -98,16 +102,16 @@ DATABASES = {
 
 AUTH_PASSWORD_VALIDATORS = [
     {
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+        "NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator",
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+        "NAME": "django.contrib.auth.password_validation.MinimumLengthValidator",
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
+        "NAME": "django.contrib.auth.password_validation.CommonPasswordValidator",
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
+        "NAME": "django.contrib.auth.password_validation.NumericPasswordValidator",
     },
 ]
 
@@ -115,9 +119,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.1/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = "en-us"
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = "UTC"
 
 USE_I18N = True
 
@@ -128,68 +132,67 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_ROOT = "/opt/mydjangoapp/static/"
-STATIC_URL = '/static/'
+STATIC_URL = "/static/"
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+MEDIA_URL = "/media/"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
-DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
+DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 
 import ssl
+
 import certifi
 
 # context = ssl.create_default_context(cafile=certifi.where())
-#context = ssl.create_default_context()
+# context = ssl.create_default_context()
 
 # Use SMTP for sending emails
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-#EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'  # Replace with your SMTP server
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_HOST = "smtp.gmail.com"  # Replace with your SMTP server
 EMAIL_PORT = 587  # Replace with your SMTP server port
 EMAIL_USE_TLS = True  # Use TLS for secure connection
-#import certifi
+# import certifi
 
-#EMAIL_SSL_CERTFILE = certifi.where()
+# EMAIL_SSL_CERTFILE = certifi.where()
 
-#EMAIL_SSL_CERTFILE = "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/certifi/cacert.pem"
+# EMAIL_SSL_CERTFILE = "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/certifi/cacert.pem"
 
-#context = ssl.create_default_context(cafile=EMAIL_SSL_CERTFILE)
-#print(context.get_ca_certs())
+# context = ssl.create_default_context(cafile=EMAIL_SSL_CERTFILE)
+# print(context.get_ca_certs())
 
 # If your SMTP server requires authentication, include the following settings
-#EMAIL_HOST_USER = 'superzoeyi@gmail.com'  # Your email address
-#EMAIL_HOST_PASSWORD = 'miassister' # Your email password
-#EMAIL_HOST_PASSWORD = 'egoi rrwz stys aypt'  # app password thing
-EMAIL_HOST_USER = 'info@c5climbing.com'
-EMAIL_HOST_PASSWORD = 'yybf hkqk xxin iisz'
+# EMAIL_HOST_USER = 'superzoeyi@gmail.com'  # Your email address
+# EMAIL_HOST_PASSWORD = 'miassister' # Your email password
+# EMAIL_HOST_PASSWORD = 'egoi rrwz stys aypt'  # app password thing
+EMAIL_HOST_USER = "info@c5climbing.com"
+EMAIL_HOST_PASSWORD = "yybf hkqk xxin iisz"
 
 # Default 'from' address for emails sent by Django
-DEFAULT_FROM_EMAIL = 'info@c5climbing.com'  # Your default 'from' address
+DEFAULT_FROM_EMAIL = "info@c5climbing.com"  # Your default 'from' address
 
 # 'from' address for error messages sent to the site administrators
-SERVER_EMAIL = 'info@c5climbing.com'  # Your error 'from' address
+SERVER_EMAIL = "info@c5climbing.com"  # Your error 'from' address
 
 LOGGING = {
-    'version': 1,
-    'disable_existing_loggers': False,
-    'handlers': {
-        'file': {
-            'level': 'DEBUG',
-            'class': 'logging.FileHandler',
-            'filename': os.path.join(BASE_DIR, 'logs/debug.log'),
+    "version": 1,
+    "disable_existing_loggers": False,
+    "handlers": {
+        "file": {
+            "level": "DEBUG",
+            "class": "logging.FileHandler",
+            "filename": os.path.join(BASE_DIR, "logs/debug.log"),
         },
     },
-    'loggers': {
-        'django': {
-            'handlers': ['file'],
-            'level': 'DEBUG',
-            'propagate': True,
+    "loggers": {
+        "django": {
+            "handlers": ["file"],
+            "level": "DEBUG",
+            "propagate": True,
         },
     },
 }
-
